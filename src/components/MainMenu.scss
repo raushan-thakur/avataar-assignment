@@ -2,19 +2,19 @@
 .main-menu {
   background-color: #333;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   color: #fff;
   height: 118px;
   gap: 40px;
-  margin: 8px;
 
     .menu-list {
       display: flex;
       list-style: none;
       padding: 0;
       margin: 0;
-
+      gap: 30px;
+      align-items: center;
       li {
         margin-right: 10px; 
         &:hover{
@@ -50,9 +50,9 @@
       }
     }
 
-    .search-bar {
-        width: 120px;
-    }
+    // .search-bar {
+    //     width: 220px;
+    // }
     // .more-section {
     //   ul {
     //     list-style: none;
@@ -61,6 +61,7 @@
     //   }
     // }
     .logo{
+      margin: 20px;
       width: 100px;
       height: 40px;
     }

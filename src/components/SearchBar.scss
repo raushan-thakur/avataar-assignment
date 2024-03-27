@@ -1,0 +1,22 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #D4D4D4;
+  
+    input[type='text'] {
+        color: white;
+        background-color:  #333;
+        border: none;
+        width: 300px;
+        padding: 8px;
+        font-size: 16px;
+        margin-right: 8px;
+  
+    //   &:focus {
+    //     outline: none;
+    //     border-color: #007bff;
+    //     box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    //   }
+    }
+}
+  

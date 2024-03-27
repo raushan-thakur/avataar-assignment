@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -21,6 +20,7 @@ function Body() {
   return (
     <div className="container">
       <h1 className="heading"> Featured Products</h1>
+      <p className="heading2">Explore and discover a variety of products</p>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}

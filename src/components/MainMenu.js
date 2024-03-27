@@ -2,18 +2,19 @@ import React, { useState, useEffect } from "react";
 import MenuItem from "./MenuItem";
 import MoreSection from "./MoreSection";
 import "./MainMenu.scss";
+import SearchBar from "./SearchBar";
 
 const MainMenu = ({ items }) => {
-  const [visibleItems, setVisibleItems] = useState(items.slice(0, 6)); 
-  const [moreItems, setMoreItems] = useState(items.slice(6)); 
+  const [visibleItems, setVisibleItems] = useState(items.slice(0, 6));
+  const [moreItems, setMoreItems] = useState(items.slice(6));
 
   const calculateMenuItems = () => {
     const menuWidth = document.getElementById("main-menu").offsetWidth;
-    const menuItemWidth = 100; 
+    const menuItemWidth = 180;
     const maxItems = Math.floor(menuWidth / menuItemWidth);
 
     if (items.length > maxItems) {
-      setVisibleItems(items.slice(0, maxItems - 1)); 
+      setVisibleItems(items.slice(0, maxItems - 1));
       setMoreItems(items.slice(maxItems - 1));
     } else {
       setVisibleItems(items);
@@ -44,7 +45,9 @@ const MainMenu = ({ items }) => {
         ))}
         {moreItems.length > 0 && <MoreSection items={moreItems} />}
       </ul>
-      <div className="search-bar">Search</div>
+      <div className="search-bar">
+        <SearchBar />
+      </div>
     </div>
   );
 };
